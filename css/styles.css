@@ -90,7 +90,7 @@ body {
   display: inline-block;
   left: 50%;
   margin-left: -6em;
-  bottom: 250px;
+  bottom: 50px;
   border-radius: 4px;
   border: 2px solid #fff;
   color: #fff;
@@ -104,6 +104,18 @@ body {
 
 #loadQuote:focus {
   outline: none;
+}
+
+@media (max-width: 800px) {
+  .quote {
+    font-size: 3rem;
+  }
+  .quote:before, .quote:after {
+    font-size: 4rem;
+  }
+  .source {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 420px) {
