@@ -40,7 +40,7 @@ const quotes = [
 
 // Create random number
 function createRandomNumber(numberUpTo) {
-  let randomNumber = Math.floor(Math.random() * numberUpTo);
+  let randomNumber = Math.floor(Math.random() * numberUpTo) + 1;
   return randomNumber;
 }
 
