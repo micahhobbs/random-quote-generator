@@ -40,8 +40,7 @@ const quotes = [
 
 // Create random number
 function createRandomNumber(numberUpTo) {
-  let randomNumber = Math.floor(Math.random() * numberUpTo) + 1;
-  return randomNumber;
+  return Math.floor(Math.random() * numberUpTo) + 1;
 }
 
 // Randomly change the background color of the page
@@ -50,7 +49,6 @@ function changeBackground() {
   let r = createRandomNumber(255);
   let g = createRandomNumber(255);
   let b = createRandomNumber(255);
-  // Select body element
   let bodyElement = document.body;
   // Update body css style
   bodyElement.style.backgroundColor = "rgb( " + r + ", " + g + ", " + b + ")";
@@ -67,12 +65,8 @@ function getRandomQuote(array) {
 function printQuote() {
   quote = getRandomQuote(quotes);
   let stringOfQuoteProperties = "";
-  stringOfQuoteProperties +=
-    '<p class="quote"> ' +
-    quote.quote +
-    " </p>" +
-    '<p class="source"> ' +
-    quote.source;
+  stringOfQuoteProperties += '<p class="quote"> ' + quote.quote +" </p>" + '<p class="source"> ' + quote.source;
+  
   if (quote.citation !== undefined) {
     stringOfQuoteProperties +=
       '<span class="citation"> ' + quote.source + " </span>";
@@ -83,6 +77,7 @@ function printQuote() {
   if (quote.tag !== undefined) {
     stringOfQuoteProperties += '<p class="tag"> ' + quote.tag;
   }
+  
   stringOfQuoteProperties += " </p>";
 
   document.getElementById("quote-box").innerHTML = stringOfQuoteProperties;
