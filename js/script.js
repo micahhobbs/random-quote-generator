@@ -40,7 +40,7 @@ const quotes = [
 
 // Create random number
 function createRandomNumber(numberUpTo) {
-  return Math.floor(Math.random() * numberUpTo) + 1;
+  return Math.floor(Math.random() * numberUpTo);
 }
 
 // Randomly change the background color of the page
@@ -57,6 +57,7 @@ function changeBackground() {
 // Create the getRandomQuote function and name it getRandomQuote
 function getRandomQuote(array) {
   let randomIndex = createRandomNumber(array.length);
+  console.log(`Get random quote index is: ${randomIndex}`)
   let randomQuote = array[randomIndex];
   return randomQuote;
 }
